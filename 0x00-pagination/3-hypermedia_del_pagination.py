@@ -26,7 +26,7 @@ class Server:
         return self.__dataset
 
     def indexed_dataset(self) -> Dict[int, List]:
-        """a methos for dataset indexed by sorting position, starting at 0"""
+        """a method for dataset indexed by sorting position, starting at 0"""
         if self.__indexed_dataset is None:
             dataset = self.dataset()
             truncated_dataset = dataset[:1000]
@@ -58,7 +58,7 @@ class Server:
         data = []
         current_index = index
         keys = sorted(indexed_data.keys())
-        for x in range(page_size):
+        for i in range(page_size):
             while (
                 current_index not in indexed_data
                 and current_index < keys[-1]
